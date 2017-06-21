@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+    <h2>Example</h2>
+<table class="table table-bodered table-hover">
+  <tr class="customhead">
+    <th>ID</th>
+    <th>Name</th> 
+    <th>Action</th>
+  </tr>
+  <tr class="customrow" *ngFor="let hero of heroes" [class.selected]="hero === selectedHero"
+        (click)="onSelect(hero)">
+    <td>{{hero.id}}</td>
+    <td>{{hero.name}}</td> 
+    <td><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+  </tr>
+  
+</table>
+   
+    <div *ngIf="selectedHero">
+      <h2>{{selectedHero.name}} details!</h2>
+      <div><label>id: </label>{{selectedHero.id}}</div>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+      </div>
+    </div>
