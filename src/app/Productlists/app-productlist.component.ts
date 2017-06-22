@@ -20,7 +20,7 @@ const HEROES: Hero[] = [
 ];
 @Component({
   selector: 'app-root',
-  templateUrl: './productlists/app.component.html',
+  templateUrl: './Productlists/app.component.html',
   styleUrls: ['./app.component.css']
 })
 

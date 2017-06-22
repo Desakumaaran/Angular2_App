@@ -15,7 +15,11 @@ import { AppRoutingModule }          from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomeModule }                from './Home/app-home.module';
-import { ProductlistModule }                from './Productlists/app-productlist.module';
+import { ProductlistModule }         from './Productlists/app-productlist.module';
+
+import { HomeComponent } from './Home/app-home.component';
+import { ProductlistComponent } from './Productlists/app-productlist.component';
+
 //import { ComposeMessageComponent } from './compose-message.component';
 //import { LoginRoutingModule }      from './login-routing.module';
 //import { LoginComponent }          from './login.component';
@@ -26,18 +30,17 @@ import { ProductlistModule }                from './Productlists/app-productlist
 
 @NgModule({
   declarations: [
-    AppComponent
-
+    AppComponent,
+      HomeComponent,
+      ProductlistComponent
+    
   ],
   imports: [
     BrowserModule,
       AppRoutingModule,
       HomeModule,
       ProductlistModule,
-      
-    //FormsModule,
-    //AlertModule.forRoot(),
-    NgbModule.forRoot()
+     NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

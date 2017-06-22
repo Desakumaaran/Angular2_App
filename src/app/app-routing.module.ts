@@ -2,7 +2,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './Home/app-home.component';
-
+import { ProductlistComponent } from './Productlists/app-productlist.component';
 //import { ComposeMessageComponent }  from './compose-message.component';
 //import { PageNotFoundComponent }    from './not-found.component';
 
@@ -21,13 +21,14 @@ const appRoutes: Routes = [
    // loadChildren: 'app/admin/admin.module#AdminModule',
     //canLoad: [AuthGuard]
   //},
-  {
-    path: 'ShowDetails',
-    loadChildren: 'app/Productlists/app-productlist.module#ProductlistModule',
-    data: { preload: true }
-  },
+//  {
+//    path: 'ShowDetails',
+//    loadChildren: 'app/Productlists/app-productlist.module#ProductlistModule',
+//    data: { preload: true }
+//  },
   //{ path: '',   redirectTo: '/heroes', pathMatch: 'full' },
-     { path: '',   redirectTo: '/Home', component: HomeComponent },
+     { path: '',   redirectTo: '/Home',pathMatch: 'full' },
+     { path: 'Productlists', component: HomeComponent }
   //{ path: '**', component: PageNotFoundComponent }
 ];
 
